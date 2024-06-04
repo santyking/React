@@ -1,22 +1,19 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-
+import React,{useState} from 'react'
 function App() {
+  const date = new Date();
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
+  const [print,setPrint] = useState(false);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <h3>Todays Date is {day}-{month}-{year}</h3> 
+      <label htmlFor="">Enter Birth Date:</label>
+      <input type="date" />
+      <button onClick={()=>{setPrint(true)}}>Calulate Age</button>
       </header>
     </div>
   );
