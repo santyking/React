@@ -9,11 +9,15 @@ function App() {
   const [datum,setDatum]  = useState(null);
   const [print,setPrint] = useState(false);
   function calculateDate(val) {
-    // console.log(val.target.value);
     const givenDate = new Date(val.target.value);
+  if (givenDate.valueOf() < date.valueOf()) {
     const diffTime = Math.abs(givenDate - date);
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); 
-    setDatum(diffDays+1);
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    setDatum(diffDays + 1);
+    setPrint(false);
+  }
+
+
   }
   return (
     <div className="App">
