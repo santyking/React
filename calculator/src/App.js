@@ -39,11 +39,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h3>
-          Today's Date is {date.getDate()}-{date.getMonth() + 1}-{date.getFullYear()}
-        </h3>
-        <label htmlFor="">Enter Birth Date:</label>
-        <input type="date" onChange={calculateDate} />
+        <h1>
+          Age Calculator
+        </h1>
+        <>
+          <label htmlFor="birthdate"><h3>Enter Birth date</h3></label>
+          <input id ="birthdate" type="date" onChange={calculateDate} />
+        </>
         {print && (
           <>
             {datum ? (
