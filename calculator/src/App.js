@@ -14,7 +14,7 @@ function App() {
       setPrint(true);
     } else {
       setDatum(0);
-      setPrint(false);
+      setPrint(true);
     }
   }
 
