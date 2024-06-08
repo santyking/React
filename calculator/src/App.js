@@ -13,7 +13,7 @@ function App() {
       setDatum(diff);
       setPrint(true);
     } else {
-      setDatum(null);
+      setDatum(0);
       setPrint(false);
     }
   }
@@ -36,6 +36,8 @@ function App() {
     return { years, months, days };
   }
 
+  console.log(datum);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -48,9 +50,9 @@ function App() {
         </>
         {print && (
           <>
-            {datum ? (
+            {(datum !== 0) ? 
               <h4>Age is {datum.years} Years {datum.months} Months {datum.days} Days</h4>
-            ) : (
+             : (
               <h4>Given date is greater than today</h4>
             )}
           </>
