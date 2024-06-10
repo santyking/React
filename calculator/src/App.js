@@ -53,7 +53,7 @@ function App() {
           Age Calculator
         </h1>
         <>
-          <label htmlFor="birthdate"><h3>Enter Birth date</h3></label>
+          <label htmlFor="birthdate"><h3>Enter Birth date :</h3></label>
           <input id="birthdate" type="date" onChange={calculateDate} />
         </>
         {
@@ -62,7 +62,7 @@ function App() {
             <h4>Age is {datum.years} Years {datum.months} Months {datum.days} Days</h4>
             : displayDate === 1 ? 
             <h4>You are born today!</h4>
-            : <h4>Born in the future</h4>
+            : <h4>Birth date is greater than Today</h4>
           )
         }
       </header>
