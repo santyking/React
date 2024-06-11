@@ -13,8 +13,9 @@ function App() {
           <h1>Lorem ipsum dolor sit amet..</h1>:
           null
         }
-        <button onClick={()=>setVisible(false)}>Hide</button>
-        <button onClick={()=>setVisible(true)}>Show</button>
+        {/* <button onClick={()=>setVisible(false)}>Hide</button>
+        <button onClick={()=>setVisible(true)}>Show</button> */}
+        <button onClick={()=>setVisible(!visible)}>Toggle</button>
       </header>
     </div>
   );
