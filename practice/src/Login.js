@@ -32,7 +32,7 @@ export default function Login() {
     return (
         <div className="App">
             <header className="App-header">
-                <img src={logo} width={100} />
+                <img src={logo} className="App-logo" alt="logo"/>
                 <h1>Login Page</h1>
                 <form onSubmit={login}>
                     <input type="text" name="userid" id="userid" placeholder='Enter Userid' onChange={user_validate} />
