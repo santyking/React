@@ -9,8 +9,7 @@ function App() {
   function getData(val) {
     // setData(val);
     console.log(val.target.value);
-    setData(val.target.value);
-    setPrint(false);
+n    setPrint(false);
   }
   function printer() {
     
