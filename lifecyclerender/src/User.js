@@ -1,9 +1,11 @@
 import react from 'react';
 
 class User extends react.Component{
+    
     render(){
+        console.warn("Render is called");
         return(
-            <h1>User Component</h1>
+            <h1>{this.props.propdata}</h1>
         );
     }
 }
