@@ -10,8 +10,8 @@ export default class User extends React.Component{
     componentDidMount(){
         console.warn("Component did Mount");
     }
-    componentDidUpdate(){
-        console.warn("Component Did Update");
+    componentDidUpdate(preProps,preState,snapshot){
+        console.warn("Component Did Update",preState.data);
     }
     render(){
         console.warn("Render");
