@@ -11,7 +11,8 @@ export default class User extends React.Component{
         console.warn("Component did Mount");
     }
     componentDidUpdate(preProps,preState,snapshot){
-        console.warn("Component Did Update",preState.counter,this.state.counter);
+        // console.warn("Component Did Update",preState.counter,this.state.counter);
+        console.warn("Component Did Update",snapshot);
         if (preState.counter === this.state.counter) {
             alert("Same");
         }
