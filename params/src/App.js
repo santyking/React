@@ -3,6 +3,7 @@ import Home from './Home';
 import About from './About';
 import './App.css';
 import Navbar from './Navbar';
+import User from './User';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
           <Routes>
             <Route path='/' element={<Home></Home>}></Route>
             <Route path='/about' element={<About></About>}></Route>
-            <Route path='/*' element={Navigate(<Home/>)}></Route>
+            <Route path='/user/:name' element={<User></User>}></Route>
+            <Route path='/*' element={<Navigate to="/"/>}></Route>
           </Routes>
         </BrowserRouter>
       </header>
