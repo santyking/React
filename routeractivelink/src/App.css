@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-link{
+  text-decoration: none;
+  color: aliceblue;
+  padding: 10px;
+}
+
+.active{
+  color: chocolate;
+}
