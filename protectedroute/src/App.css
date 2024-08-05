@@ -2,18 +2,6 @@
   text-align: center;
 }
 
-ul{
-  list-style: none;
-  display: flex;
-}
-
-.navbar-items{
-  align-items: center;
-  text-decoration: none;
-  color: wheat;
-  padding: 1%;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
