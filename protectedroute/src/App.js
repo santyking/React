@@ -13,8 +13,8 @@ function App() {
         <BrowserRouter>
           <Navbar/>
           <Routes>
-            <Route path='/' element={<Protected Comp ={Home}/> }></Route>
-            <Route path='/about' element={<About></About>}/>
+            <Route path='/' element={<Protected Component ={Home}/> }></Route>
+            <Route path='/about' element={<Protected Component ={About}/>}/>
             <Route path='/login' element={<Login></Login>}/>
           </Routes>
         </BrowserRouter>        
