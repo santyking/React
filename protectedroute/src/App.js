@@ -4,6 +4,7 @@ import Home from './Home';
 import About from './About';
 import Login from './Login';
 import Navbar from './Navbar';
+import Protected from './Protected';
 
 function App() {
   return (
@@ -12,8 +13,8 @@ function App() {
         <BrowserRouter>
           <Navbar/>
           <Routes>
-            <Route path='/' element={<Home></Home>}></Route>
-            <Route path='/about' element={<About></About>}/>
+            <Route path='/' element={<Protected Component ={Home}/> }></Route>
+            <Route path='/about' element={<Protected Component ={About}/>}/>
             <Route path='/login' element={<Login></Login>}/>
           </Routes>
         </BrowserRouter>        
