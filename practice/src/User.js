@@ -1,23 +1,13 @@
-import React,{Component} from "react";
-class User extends Component{
-    constructor(){
-        super();
-        this.state = {
-            data:"Santosh"
-        };
-    }
-    apple(){
-        this.setState({
-            data:"Anvi"
-        })
-    }
-    render(){
-        return(
-            <> 
-            <h1>{this.state.data}</h1>
-            <button onClick={()=>this.apple()}>Update</button>
-            </>
-        );
-    }
+function User(props){
+    console.log(props);
+    return(
+        <>
+            <p>{props.name}</p>
+            <p>{props.wife}</p>
+            <p>{props.daughter}</p>
+            <p>{props.other.add}</p>
+            <p>{props.other.city}</p>
+        </>
+    );
 }
 export default User;
