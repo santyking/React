@@ -1,22 +1,22 @@
 import './App.css';
-import User from './User';
-import React from 'react';
-class App extends React.Component{
-  constructor(){
-    super();
-    this.state={
-      name :"Santosh"
+import {useState} from 'react';
+function App(){
+    const [data,setData]  = useState();
+    const [press,setPress] = useState(false);
+    function updateData(val){
+      setData(val.target.value);
     }
-  }
-  render(){
     return (
       <div className="App">
         <header className="App-header">
-          <User name={this.state.name}/>
-          <button onClick={()=>this.setState({name:"Anvi"})}>Update</button>
+          {
+            press?<h1>{data}</h1>:null
+          }
+          
+          <input type="text" onChange={updateData}/>
+          <button onClick={()=>setPress(true)}>Update</button>
         </header>
       </div>
     );  
-  }
 }
 export default App;
