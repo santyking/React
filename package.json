@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@testing-library/react": "^16.2.0",
     "react-router-dom": "^6.24.1"
   }
 }
