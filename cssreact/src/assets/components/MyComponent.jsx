@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '.\'
+import '../../index.css'
 export default function MyComponent() {
   return (
     <div className='myPrimary'>MyComponent</div>

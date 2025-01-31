@@ -1,15 +1,14 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import MyComponent from './assets/components/MyComponent'
+import ThemeComponent from './assets/components/ThemeComponent'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [appTheme,setTheme] = useState("light"); 
   return (
     <>
-      <MyComponent/>
+      <ThemeComponent theme={appTheme}/>
+      <button onClick={()=>setTheme("dark")}>Dark Theme</button>
+      <button onClick={()=>setTheme("light")}>Light Theme</button>
     </>
   )
 }
