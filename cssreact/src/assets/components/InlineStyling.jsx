@@ -1,13 +1,13 @@
 import React from 'react'
-
+const myTheme = {
+    color:'white',
+    fontSize:'72px' 
+}
 function InlineStyling() {
-    const myTheme = {
-        color:white,
-        height: 6em
-    }
+    
   return (
     <div>
-      <h1>Hello There</h1>
+      <h1 style={myTheme}>Hello There</h1>
     </div>
   )
 }
