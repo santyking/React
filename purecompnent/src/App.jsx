@@ -1,10 +1,10 @@
-import PureComp from './components/PureComp'
+import ParentComp from './components/ParentComp'
 import './App.css'
 
 function App() {
   return (
     <>
-      <PureComp/>
+      <ParentComp/>
     </>
   )
 }
