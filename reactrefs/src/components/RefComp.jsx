@@ -6,15 +6,17 @@ export class RefComp extends Component {
           this.inputRef = React.createRef()
       }
       componentDidMount(){
-        this.inputRef.current.focus
+        this.inputRef.current.focus()
+      }
+      clickHandler =() =>{
+        alert(this.inputRef.current.value);       
       }
     render() { 
     return (
       <div>
         <h1>Ref Component</h1>
         <input type="text" ref={this.inputRef}/>
-
-
+        <button onClick={this.clickHandler}>get data</button>
       </div>
     )
   }
