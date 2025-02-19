@@ -15,7 +15,9 @@ function ArrayComponent() {
         <ul>
             {
                 students.map(student=>
-                    (<li key={student.id}>{student.value}</li>)
+                {
+                    return  <li key={student.id}>{student.value}</li>
+                }
                 )
             }
         </ul>
