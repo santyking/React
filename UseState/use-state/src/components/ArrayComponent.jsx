@@ -5,8 +5,8 @@ function ArrayComponent() {
     const adder = () =>{
         setStudents([...students,{
             id: students.length,
-            value: Math.floor(Math.random() * 10) + 1
-        }])
+            value: Math.floor(Math.random() * 10) + 1,
+        }]);
     }
   return (
     <div>

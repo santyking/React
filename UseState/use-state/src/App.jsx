@@ -6,6 +6,7 @@ import ArrayComponent from './components/ArrayComponent'
 import ObjComponent from './components/ObjComponent'
 import PracticePrev from './components/PracticePrev'
 import PracticeObj from './components/PracticeObj'
+import PracticeArray from './components/PracticeArray'
 import './App.css'
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       {/* <ArrayComponent></ArrayComponent> */}
       {/* <ObjComponent/> */}
       {/* <PracticePrev/> */}
-      <PracticeObj/>
+      {/* <PracticeObj/> */}
+      <PracticeArray/>
     </>
   )
 }
