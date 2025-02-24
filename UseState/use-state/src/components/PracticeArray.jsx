@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-
 function PracticeArray() {
     const [number,setNumber] = useState([]);
     const Adder = ()=> {
@@ -15,11 +14,9 @@ function PracticeArray() {
         <ul>
             {
                 number.map(num=>(<li key={num.id}>{num.value}</li>))
-                // number.map(num=>console.log(num))
             }
         </ul>
     </div>
   )
 }
-
 export default PracticeArray

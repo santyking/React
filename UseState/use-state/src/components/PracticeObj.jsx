@@ -11,5 +11,4 @@ function PracticeObj() {
     </div>
   )
 }
-
 export default PracticeObj
