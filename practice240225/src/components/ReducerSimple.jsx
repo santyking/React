@@ -14,13 +14,13 @@ const reducer = (state,action)=>{
 }
 
 function ReducerSimple() {
-    useReducer(reducer,intitalState)
+    const [count,dispatch] = useReducer(reducer,intitalState)
   return (
     <div>
-        <h1>Count</h1>
-        <button>+</button>
-        <button>-</button>
-        <button>0</button>
+        <h1>Count - {count}</h1>
+        <button onClick={()=>dispatch('increment')}>+</button>
+        <button onClick={()=>dispatch('decrement')}>-</button>
+        <button onClick={()=>dispatch('reset')}>0</button>
     </div>
   )
 }
