@@ -7,13 +7,14 @@ import ArrComp from './components/ArrComp'
 import ObjComp from './components/ObjComp'
 import PostList from './components/PostList'
 import SinglePost from './components/SinglePost'
+import ReducerSimple from './components/ReducerSimple'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <SinglePost/>
+      <ReducerSimple/>
     </>
   )
 }
