@@ -2,14 +2,14 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import ArrayList from './components/ArrayList'
+import ArrayItemDelete from './components/ArrayItemDelete'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <ArrayList/>
+      <ArrayItemDelete/>
     </>
   )
 }
