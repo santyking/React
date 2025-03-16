@@ -58,3 +58,67 @@ function PracticeObj() {
 }
 export default PracticeObj
 ```
+**UseEffect Hook**
+Get List of items through API and display it.
+Note : When you want to call the useEffect hook on every reload, dont write any [] . 
+When you want to run useeffect only on initial load, use [] .
+When you want to run useeffect when a particular state is updated, write [stateName]. 
+With the help of this callback, we can run useffect conditionally, this is same as componentdidmount, componentdidupdate. 
+```
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+
+function ApiComponent() {
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => setPosts(response.data))
+      .catch((error) => console.error(error));
+  });
+  return (
+    <div>
+      <h1>Api Response</h1>
+
+      <ul>
+        {posts.map((item) => (
+          <li key={item.id}>{item.body}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default ApiComponent;
+```
+Show particular item using API
+```
+import axios from 'axios';
+import React,{useState,useEffect} from 'react'
+
+function PostComponent() {
+    const [id,setId] = useState(1);
+    const [buttonClick,setButtonClick] = useState(1);
+    const [posts,setPosts] = useState({});
+    function ClickHandler() {
+        setButtonClick(id);
+    }
+    useEffect(()=>{
+        axios.get(`https://jsonplaceholder.typicode.com/posts/${buttonClick}`)
+        .then(response=>setPosts(response.data))
+        .catch(err=>console.log(err))
+    },[buttonClick]);
+  return (
+    <div>
+        <h1>Post Component</h1>
+        <input type="text" value={id} onChange={e=>setId(e.target.value)}/>
+        <button onClick={ClickHandler}>Click</button>
+        <h2>{posts.body}</h2>
+    </div>
+  )
+}
+
+export default PostComponent
+```
+
+
