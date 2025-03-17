@@ -4,14 +4,15 @@ import viteLogo from '/vite.svg'
 import './App.css'
 // import ReducerApi from './components/ReducerApi'
 // import ReducerApi2 from './components/ReducerApi2'
-import ReducerApi3 from './components/ReducerApi3'
+// import ReducerApi3 from './components/ReducerApi3'
+import ReducerAPI4 from './components/ReducerAPI4'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <ReducerApi3/>
+      <ReducerAPI4/>
     </>
   )
 }
