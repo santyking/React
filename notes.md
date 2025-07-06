@@ -120,5 +120,29 @@ function PostComponent() {
 
 export default PostComponent
 ```
+**UseContext Hook**
+In the case of nested components it becomes difficult to pass props. With usecontent you can declare at parent level and passdown directly at nth child level.
 
-
+Step 1 - import createContext
+```
+import {createContext,useState} from 'react' // STEP 1
+```
+Step 2 - create context variable
+```
+export const ThemeContext = createContext(); // step 2
+```
+Step 3 - wrap context around parent
+```
+      <ThemeContext.Provider value={theme}> // step 3
+        <CompC/>
+      </ThemeContext.Provider>
+```
+Step 4 - import the context in required app along with usecontext
+```
+import React,{useContext} from 'react'
+import {ThemeContext} from '../App' // step 4
+```
+Step 5 - use usecontext to get value in variable and use it ahead
+```
+const theme  = useContext(ThemeContext) // step 5
+```
