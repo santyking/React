@@ -59,6 +59,7 @@ function PracticeObj() {
 export default PracticeObj
 ```
 **UseEffect Hook**
+
 Get List of items through API and display it.
 Note : When you want to call the useEffect hook on every reload, dont write any [] . 
 When you want to run useeffect only on initial load, use [] .
@@ -121,6 +122,7 @@ function PostComponent() {
 export default PostComponent
 ```
 **UseContext Hook**
+
 In the case of nested components it becomes difficult to pass props. With usecontent you can declare at parent level and passdown directly at nth child level.
 
 Step 1 - import createContext
@@ -145,4 +147,37 @@ import {ThemeContext} from '../App' // step 4
 Step 5 - use usecontext to get value in variable and use it ahead
 ```
 const theme  = useContext(ThemeContext) // step 5
+```
+**UseReducer Hook**
+
+Used for State management similar to usestate.  It is used when the state of a component is complex and requires more than one state variable.
+
+```
+import React, { useReducer, useState } from "react"; // step 1
+function CounterOne() {
+  const initialState = 0; // step 3
+  const reducer = (state, action) => {
+    //step 4
+    switch (action) {
+      case "increment":
+        return state + 1;
+      case "decrement":
+        return state - 1;
+      case "reset":
+        return initialState;
+      default:
+        return state;
+    }
+  };
+  const [state, dispatch] = useReducer(reducer, initialState); // step 2
+  return (
+    <div>
+      <p>{state}</p>
+      <button onClick={() => dispatch("increment")}>+</button>
+      <button onClick={() => dispatch("decrement")}>-</button>
+      <button onClick={() => dispatch("reset")}>X</button>
+    </div>
+  );
+}
+export default CounterOne;
 ```
