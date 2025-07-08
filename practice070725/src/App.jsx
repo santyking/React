@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import CounterOne from './components/CounterOne'
+// import CounterOne from './components/CounterOne'
+import CounterTwo from './components/CounterTwo'
 import './App.css'
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
 
   return (
     <>
-      <CounterOne/>
+      {/* <CounterOne/> */}
+      <CounterTwo/>
     </>
   )
 }
