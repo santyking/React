@@ -1,12 +1,12 @@
-import ComponentOne from './components/ComponentOne'
-import './App.css'
+import Parent from "./components/Parent";
+import "./App.css";
 
 function App() {
   return (
     <>
-      <ComponentOne/>
+      <Parent />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
