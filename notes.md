@@ -181,3 +181,53 @@ function CounterOne() {
 }
 export default CounterOne;
 ```
+**UseRef**
+In useRef we can access and manupulate dom nodes directly.
+Eg 1
+```
+import React, { useEffect, useRef, useState } from "react"; // step 1
+
+function FocusInput() {
+  const inputRef = useRef(null); // step 2
+  useEffect(() => {
+    inputRef.current.focus() // step 3
+  }, [])
+  
+  return (
+    <div>
+      <h1>Focus Input</h1>
+      <input ref={inputRef} type="text" /> // step 4
+    </div>
+  );
+}
+
+export default FocusInput;
+```
+eg 2
+```
+import React, { useState, useEffect, useRef } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  const counterRef = useRef();
+  useEffect(() => {
+    counterRef.current = setInterval(() => {
+      setCount((prevCount) => prevCount + 1);
+    }, 1000);
+    return () => {
+      clearInterval(counterRef.current);
+    };
+  }, []);
+  return (
+    <div>
+      <h1>{count}</h1>
+      <p>
+        <button onClick={() => clearInterval(counterRef.current)}>Reset</button>
+      </p>
+    </div>
+  );
+}
+
+export default Counter;
+
+```
