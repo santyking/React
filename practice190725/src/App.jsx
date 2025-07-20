@@ -1,4 +1,4 @@
-// import InputForm from './components/InputForm'
+import InputForm from './components/InputForm'
 import { useEffect, useReducer } from 'react'
 import './App.css'
 import ListItems from './components/ListItems'
@@ -8,8 +8,8 @@ function App() {
   
   return (
     <>
-      {/* <InputForm/> */}
-      <ListItems/>
+      <InputForm/>
+      {/* <ListItems/> */}
     </>
   )
 }
