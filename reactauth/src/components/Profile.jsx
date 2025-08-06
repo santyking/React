@@ -1,11 +1,18 @@
 import React from 'react'
-import Navbar from './Navbar'
+import { useAuth } from './Auth'
+import { useNavigate } from 'react-router-dom';
 
 function Profile() {
+  const auth = useAuth();
+  const navigate = useNavigate();
+  const handleLogout = ()=>{
+    auth.logout();
+    navigate('/');
+  }
   return (
     <div>
-        <Navbar/>
-        <h1>Profile</h1>
+        <h1>Welcome {auth.user}</h1>
+        <button onClick={handleLogout}>Logout</button>
     </div>
   )
 }

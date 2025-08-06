@@ -1,21 +1,26 @@
-import { Routes,Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Profile from './components/Profile'
 import Home from './components/Home'
-import { authProvider } from './components/Auth'
+import { AuthProvider } from './components/Auth'
 import Login from './components/Login'
+import Navbar from './components/Navbar'
+import RequireAuth from './components/RequireAuth'
 
 function App() {
   return (
-    <>
-    <authProvider>
+    <AuthProvider>
+      <Navbar />
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/profile' element={<Profile/>}/>
-        <Route path='/login' element={<Login/>}/>
+        <Route path='/' element={<Home />} />
+        <Route path='/profile' element={
+          <RequireAuth>
+            <Profile />
+          </RequireAuth>
+          } />
+        <Route path='/login' element={<Login />} />
       </Routes>
-    </authProvider>
-    </>
+    </AuthProvider>
   )
 }
 
