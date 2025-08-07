@@ -7,10 +7,10 @@ function Login() {
     const auth = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
-    const redirectPath = location.state?.path||'/' 
+    const redirectPath = location.state?.path || '/';
     const handleLogin = ()=>{
         auth.login(user);
-        navigate(redirectPath,{replace:true});
+        navigate('/profile', { replace: true });
     }
   return (
     <div>
