@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var message = "Hello there";
+console.log(message);
+var x = 10;
+x = 101;
+console.log(x);
+var status = true;
+var username = "Santosh";
+var sentence = "Hello ".concat(username, "\nHOW ARE You");
+console.log(sentence);
